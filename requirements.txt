@@ -1,0 +1,11 @@
+tensorflow-gpu
+keras
+matplotlib
+numpy
+Pillow
+opencv-contrib-python
+tqdm
+scipy
+scikit-learn
+scikit-image
+Flask
