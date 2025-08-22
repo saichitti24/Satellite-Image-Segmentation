@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Loading</title>
+	<link rel="stylesheet" type="text/css" href="../static/css/style.css">
+	<script>
+		function loadScript() {
+			var xmlHttp = new XMLHttpRequest();
+			xmlHttp.onreadystatechange = function() {
+				if(xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+					window.location.replace("{{url_for('upload')}}");
+				}
+			}
+
+			xmlHttp.open("POST", "{{url_for('upload')}}");
+			xmlHttp.send()
+		}
+	</script>
+</head>
+<body onload="loadScript()">
+	<div id="loading-box">Loading Base Map, Please Wait</div>
+</body>
+</html>
